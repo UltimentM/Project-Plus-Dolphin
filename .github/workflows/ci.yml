@@ -55,7 +55,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          repository: Project-Plus-Development-Team/Project-Plus-Dolphin
+          repository: UltimentM/Project-Plus-Dolphin
           ref: master
           submodules: recursive
           fetch-depth: 0
@@ -261,7 +261,7 @@ jobs:
     - name: Checkout Upstream Repo
       uses: actions/checkout@v4
       with:
-        repository: Project-Plus-Development-Team/Project-Plus-Dolphin
+        repository: UltimentM/Project-Plus-Dolphin
         ref: master
         fetch-depth: 0
         fetch-tags: true
@@ -375,7 +375,7 @@ jobs:
         chmod a+x ./squashfs-root/runtime
         chmod a+x ./squashfs-root/AppRun-patched
         chmod a+x ./squashfs-root/update.sh
-        export UPD_INFO="gh-releases-zsync|Project-Plus-Development-Team|Project-Plus-Dolphin|continuous|Project+_Dolphin-x86_64.AppImage.zsync"
+        export UPD_INFO="gh-releases-zsync|UltimentM|Project-Plus-Dolphin|continuous|Project+_Dolphin-x86_64.AppImage.zsync"
         /tmp/squashfs-root/AppRun --appdir="$GITHUB_WORKSPACE"/squashfs-root/ --plugin qt -d "$GITHUB_WORKSPACE"/squashfs-root/project-plus-dolphin.desktop -i "$GITHUB_WORKSPACE"/squashfs-root/project-plus-dolphin.svg \
         --exclude-library=libglib* --output appimage
         ls . | grep *.AppImage
